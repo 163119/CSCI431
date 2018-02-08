@@ -1,3 +1,15 @@
+/*
+ *	Student Name:		Christopher Aumen
+ *	Program Name:		Number of Primes from 2 to N
+ *	Creation Date:		September 12, 2017
+ *	Last Modified Date:	Febuary 7, 2018
+ *	CSCI Course:		CSCI-431 Operating Systems
+ *	Grade Received:		100
+ *	Comments regarding design:
+ *		Program takes two input paramters (integers).  The first is the number of threads to use, the second
+ *			is the maximum value to determine if it's prime.
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -11,6 +23,7 @@ long isPrime(long x);
 void* findPrimes(void* in);
 
 int main (int argc, char* argv[]) {
+// INPUT PARAMETER VALIDATION
 if (argc != 3) {
   	printf("Please enter two parameters to this program.\n");
 	return(-1);
@@ -42,6 +55,7 @@ for (n = 0; n<N; n++) {
 		return(-3);
 	}
 }
+//gather results
 void* tmp;
 long ret = 0;
 for (n = 0; n < N; n++) {
