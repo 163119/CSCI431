@@ -7,5 +7,5 @@ This program utilizes threading to efficiently count the number of primes from 2
 
 ## How to compile &  run it
 1. Open Terminal
-1. gcc -o run {INSTALL DIR}/src/lab02-2.c
+1. gcc -o run {INSTALL DIR}/src/lab02-2.c -lm -pthread
 1. ./run {number of threads to use} {N}
